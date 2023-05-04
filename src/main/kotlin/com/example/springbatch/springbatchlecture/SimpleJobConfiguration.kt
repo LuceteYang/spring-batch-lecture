@@ -15,7 +15,7 @@ class SimpleJobConfiguration(
     private val stepBuilderFactory: StepBuilderFactory,
 ) {
     @Bean
-    fun simpleJob() = jobBuilderFactory["simpleJob"]
+    fun simpleJob() = jobBuilderFactory["simpleJob"] // --job.name=simpleJob date(date)=2023/04/09 age(double)=16.5
         .start(taskletStep())
         .next(customTaskletStep())
         .next(simpleJobLastStep())
